@@ -1,0 +1,189 @@
+/** @format */
+
+body {
+	max-width: 960px;
+	margin: 200px auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+/** Spinner */
+.spinner {
+	width: 100px;
+	height: 100px;
+	position: relative;
+}
+
+.spinner div {
+	box-sizing: border-box;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border: 10px solid transparent;
+	border-top-color: #ad60f5;
+	border-radius: 50%;
+	animation: spinnerOne 1.5s linear infinite;
+}
+
+.spinner div:nth-child(2) {
+	border: 10px solid transparent;
+	border-bottom-color: #ad60f5;
+	animation: spinnerTwo 1.5s linear infinite;
+}
+
+@keyframes spinnerOne {
+	0% {
+		transform: rotate(0deg);
+		border-width: 10px;
+	}
+	50% {
+		transform: rotate(180deg);
+		border-width: 1px;
+	}
+	100% {
+		transform: rotate(360deg);
+		border-width: 10px;
+	}
+}
+
+@keyframes spinnerTwo {
+	0% {
+		transform: rotate(0deg);
+		border-width: 1px;
+	}
+	50% {
+		transform: rotate(180deg);
+		border-width: 10px;
+	}
+	100% {
+		transform: rotate(360deg);
+		border-width: 1px;
+	}
+}
+
+/** Bouncing Balls */
+.bounce {
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-end;
+	width: 100px;
+	height: 100px;
+}
+
+.bounce div {
+	width: 20%;
+	height: 20%;
+	background-color: #0077ff;
+	border-radius: 50%;
+	animation: bounce 0.5s cubic-bezier(0.19, 0.57, 0.3, 0.98) infinite alternate;
+}
+.bounce div:nth-child(2) {
+	animation-delay: 0.1s;
+}
+.bounce div:nth-child(3) {
+	animation-delay: 0.2s;
+}
+.bounce div:nth-child(4) {
+	animation-delay: 0.3s;
+}
+
+@keyframes bounce {
+	from {
+		transform: translateY(0);
+		opacity: 0.2;
+	}
+	to {
+		transform: translateY(-100px);
+	}
+}
+
+/** Flipping Squares */
+
+/** Circle Loader */
+
+.circle {
+	width: 100px;
+	height: 100px;
+	display: flex;
+	border-radius: 50%;
+	border: 3px solid #e7e7e7;
+	border-top-color: #ad60f5;
+	animation: spin 1s infinite ease;
+}
+
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/** Dots */
+.dots {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.dots div {
+	width: 2rem;
+	height: 2rem;
+	background-color: #60d7f5;
+	border-radius: 50%;
+	box-shadow: 2px 2px 5px #4b4b4b;
+	animation: dots 0.5s cubic-bezier(0.19, 0.57, 0.3, 0.98) infinite alternate;
+}
+.dots div:nth-child(2) {
+	animation-delay: 0.1s;
+}
+.dots div:nth-child(3) {
+	animation-delay: 0.2s;
+}
+.dots div:nth-child(4) {
+	animation-delay: 0.3s;
+}
+
+@keyframes dots {
+	from {
+		transform: scale(0);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+
+/** Stripes */
+
+.stripe {
+	width: 50px;
+	height: 120px;
+	display: flex;
+	justify-content: space-around;
+}
+
+.stripe div {
+	width: 4px;
+	height: 100%;
+	background-color: #0077ff;
+	border-radius: 20%;
+	animation: stripe .5s ease-in-out infinite alternate;
+
+}
+.stripe div:nth-child(2) {
+	animation: stripe .5s ease-in-out infinite alternate-reverse;
+
+
+}
+.stripe div:nth-child(3) {
+	animation: stripe .5s ease-in-out infinite alternate;
+
+
+}
+
+@keyframes stripe {
+	from {
+		transform: scaleY(0.5);
+	}
+	to {
+		transform: scaleY(1);
+	}
+}
