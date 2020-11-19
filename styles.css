@@ -1,101 +1,106 @@
 /** @format */
 
 body {
-	max-width: 960px;
-	margin: 200px auto;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
+  max-width: 960px;
+  margin: 200px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+body div[class] {
+  margin: 50px;
+  min-width: 100px;
+  min-height: 100px;
 }
 
 /** Spinner */
 .spinner {
-	width: 100px;
-	height: 100px;
-	position: relative;
+  width: 100px;
+  height: 100px;
+  position: relative;
 }
 
 .spinner div {
-	box-sizing: border-box;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	border: 10px solid transparent;
-	border-top-color: #ad60f5;
-	border-radius: 50%;
-	animation: spinnerOne 1.5s linear infinite;
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 10px solid transparent;
+  border-top-color: #ad60f5;
+  border-radius: 50%;
+  animation: spinnerOne 1.5s linear infinite;
 }
 
 .spinner div:nth-child(2) {
-	border: 10px solid transparent;
-	border-bottom-color: #ad60f5;
-	animation: spinnerTwo 1.5s linear infinite;
+  border: 10px solid transparent;
+  border-bottom-color: #ad60f5;
+  animation: spinnerTwo 1.5s linear infinite;
 }
 
 @keyframes spinnerOne {
-	0% {
-		transform: rotate(0deg);
-		border-width: 10px;
-	}
-	50% {
-		transform: rotate(180deg);
-		border-width: 1px;
-	}
-	100% {
-		transform: rotate(360deg);
-		border-width: 10px;
-	}
+  0% {
+    transform: rotate(0deg);
+    border-width: 10px;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-width: 1px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-width: 10px;
+  }
 }
 
 @keyframes spinnerTwo {
-	0% {
-		transform: rotate(0deg);
-		border-width: 1px;
-	}
-	50% {
-		transform: rotate(180deg);
-		border-width: 10px;
-	}
-	100% {
-		transform: rotate(360deg);
-		border-width: 1px;
-	}
+  0% {
+    transform: rotate(0deg);
+    border-width: 1px;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-width: 10px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-width: 1px;
+  }
 }
 
 /** Bouncing Balls */
 .bounce {
-	display: flex;
-	justify-content: space-around;
-	align-items: flex-end;
-	width: 100px;
-	height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 100px;
+  height: 100px;
 }
 
 .bounce div {
-	width: 20%;
-	height: 20%;
-	background-color: #0077ff;
-	border-radius: 50%;
-	animation: bounce 0.5s cubic-bezier(0.19, 0.57, 0.3, 0.98) infinite alternate;
+  width: 20%;
+  height: 20%;
+  background-color: #0077ff;
+  border-radius: 50%;
+  animation: bounce 0.5s cubic-bezier(0.19, 0.57, 0.3, 0.98) infinite alternate;
 }
 .bounce div:nth-child(2) {
-	animation-delay: 0.1s;
+  animation-delay: 0.1s;
 }
 .bounce div:nth-child(3) {
-	animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 .bounce div:nth-child(4) {
-	animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 
 @keyframes bounce {
-	from {
-		transform: translateY(0);
-		opacity: 0.2;
-	}
-	to {
-		transform: translateY(-100px);
-	}
+  from {
+    transform: translateY(0);
+    opacity: 0.2;
+  }
+  to {
+    transform: translateY(-100px);
+  }
 }
 
 /** Flipping Squares */
@@ -103,87 +108,138 @@ body {
 /** Circle Loader */
 
 .circle {
-	width: 100px;
-	height: 100px;
-	display: flex;
-	border-radius: 50%;
-	border: 3px solid #e7e7e7;
-	border-top-color: #ad60f5;
-	animation: spin 1s infinite ease;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  border-radius: 50%;
+  border: 3px solid #e7e7e7;
+  border-top-color: #ad60f5;
+  animation: spin 1s infinite ease;
 }
 
 @keyframes spin {
-	to {
-		transform: rotate(360deg);
-	}
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /** Dots */
 .dots {
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 .dots div {
-	width: 2rem;
-	height: 2rem;
-	background-color: #60d7f5;
-	border-radius: 50%;
-	box-shadow: 2px 2px 5px #4b4b4b;
-	animation: dots 0.5s cubic-bezier(0.19, 0.57, 0.3, 0.98) infinite alternate;
+  width: 2rem;
+  height: 2rem;
+  background-color: #60d7f5;
+  border-radius: 50%;
+  animation: dots 0.5s cubic-bezier(0.19, 0.57, 0.3, 0.98) infinite alternate;
 }
 .dots div:nth-child(2) {
-	animation-delay: 0.1s;
+  animation-delay: 0.1s;
 }
 .dots div:nth-child(3) {
-	animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 .dots div:nth-child(4) {
-	animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 
 @keyframes dots {
-	from {
-		transform: scale(0);
-	}
-	to {
-		transform: scale(1);
-	}
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 /** Stripes */
 
 .stripe {
-	width: 50px;
-	height: 120px;
-	display: flex;
-	justify-content: space-around;
+  width: 50px;
+  height: 120px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .stripe div {
-	width: 4px;
-	height: 100%;
-	background-color: #0077ff;
-	border-radius: 20%;
-	animation: stripe .5s ease-in-out infinite alternate;
-
+  width: 4px;
+  height: 40%;
+  background-color: #0077ff;
+  border-radius: 20%;
+  animation: stripe 0.5s ease-in-out infinite alternate;
+  animation-delay: 0.3s;
 }
 .stripe div:nth-child(2) {
-	animation: stripe .5s ease-in-out infinite alternate-reverse;
-
-
+  animation: stripe 0.5s ease-in-out infinite alternate;
+  animation-delay: 0.2s;
+  height: 60%;
 }
 .stripe div:nth-child(3) {
-	animation: stripe .5s ease-in-out infinite alternate;
+  animation: stripe 0.5s ease-in-out infinite alternate;
+  height: 100%;
+}
+.stripe div:nth-child(4) {
+  animation: stripe 0.5s ease-in-out infinite alternate;
+  animation-delay: 0.2s;
 
-
+  height: 60%;
+}
+.stripe div:nth-child(5) {
+  animation: stripe 0.5s ease-in-out infinite alternate;
+  animation-delay: 0.3s;
+  height: 40%;
 }
 
 @keyframes stripe {
-	from {
-		transform: scaleY(0.5);
-	}
-	to {
-		transform: scaleY(1);
-	}
+  from {
+    transform: scaleY(0.2);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+/** Flipping Squares  */
+
+.square {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  perspective: 100px;
+}
+
+.square div {
+  position: absolute;
+  top: 0;
+  height: 50%;
+  width: 50%;
+  background-color: coral;
+  animation: flip 2s linear infinite;
+  transform-origin: right bottom;
+}
+.square div:nth-child(2) {
+  animation-delay: 1s;
+  opacity: 0.5;
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateX(0) rotateY(0);
+  }
+  25% {
+    transform: rotateX(0) rotateY(180deg);
+  }
+  50% {
+    transform: rotateX(180deg) rotateY(180deg);
+  }
+  75% {
+    transform: rotateX(180deg) rotateY(0);
+  }
+  100% {
+    transform: rotateX(0) rotateY(0);
+  }
 }
